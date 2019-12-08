@@ -6,7 +6,7 @@ using SObject = StardewValley.Object;
 
 namespace SilentOak.AutoQualityPatch
 {
-    internal class RecipeAdaptor : Pathoschild.Stardew.Automate.IRecipe
+    internal class RecipeAdaptor : IRecipe
     {
         /*********
          * Fields
@@ -44,7 +44,8 @@ namespace SilentOak.AutoQualityPatch
         /// Gets the recipe's total preparing time in minutes.
         /// </summary>
         /// <value>The minutes.</value>
-        public int Minutes => _underlying.Minutes;
+        public Func<Item, int> Minutes => item => _underlying.Minutes;
+        // public int Minutes => _underlying.Minutes;
 
 
         /*****************

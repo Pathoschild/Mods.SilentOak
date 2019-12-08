@@ -22,9 +22,8 @@
 
   <ItemGroup>
     <Reference Include="Automate">
-      <HintPath>$(GamePath)\Mods\Automate\Automate.dll</HintPath>
-      <Private>False</Private>
-      <IncludeInPackage>false</IncludeInPackage>
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods\ModTestingMods\Automate\Automate.dll</HintPath>
+      <Private>false</Private>
     </Reference>
   </ItemGroup>
 

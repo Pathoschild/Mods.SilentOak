@@ -47,7 +47,7 @@ namespace SilentOak.QualityProducts.Patches
                 prefix: new HarmonyMethod(typeof(BetterMeadIconsPatcher), nameof(BetterMeadIconsPatcher.Object_Draw2))
             );
             harmony.Patch(
-                original: AccessTools.Method(typeof(SObject), nameof(SObject.drawInMenu), parameters: new[] { typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float), typeof(bool), typeof(Color), typeof(bool) }),
+                original: AccessTools.Method(typeof(SObject), nameof(SObject.drawInMenu), parameters: new[] { typeof(SpriteBatch), typeof(Vector2), typeof(float), typeof(float), typeof(float), typeof(StackDrawType), typeof(Color), typeof(bool) }),
                 prefix: new HarmonyMethod(typeof(BetterMeadIconsPatcher), nameof(BetterMeadIconsPatcher.Object_DrawInMenu))
             );
             harmony.Patch(

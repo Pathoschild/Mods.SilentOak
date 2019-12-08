@@ -82,7 +82,7 @@ namespace SilentOak.AutoQualityPatch.Patches
                     {
                         Item inputStack = consumable.Take();
                         machine.heldObject.Value = recipe.Output(inputStack);
-                        machine.MinutesUntilReady = recipe.Minutes;
+                        machine.MinutesUntilReady = recipe.Output(inputStack).MinutesUntilReady;//recipe.Minutes;
                         __result = true;
                         return false;
                     }
